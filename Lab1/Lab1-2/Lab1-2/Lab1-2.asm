@@ -16,18 +16,18 @@ ExitProcess PROTO, dwExitCode:byte
 main PROC
 
 mov al, a
-not al
+xor al, 1
 or al, b
 or al, f
 mov ah, d
-not ah
+xor ah, 1
 and al, ah
-not al
+xor al, 1
 mov t, al
 
 mov al, b
 or al, f
-not al
+xor al, 1
 and al, a
 or al, d
 mov s, al
