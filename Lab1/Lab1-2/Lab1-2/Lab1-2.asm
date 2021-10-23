@@ -3,8 +3,8 @@
 .stack 4096
 
 .data
-a byte 0
-b byte 0
+a byte 1
+b byte 1
 f byte 0
 d byte 0
 t byte ?
@@ -16,18 +16,18 @@ ExitProcess PROTO, dwExitCode:byte
 main PROC
 
 mov al, a
-not al
+xor al, 1
 or al, b
 or al, f
 mov ah, d
-not ah
+xor ah, 1
 and al, ah
-not al
+xor al, 1
 mov t, al
 
 mov al, b
 or al, f
-not al
+xor al, 1
 and al, a
 or al, d
 mov s, al
